@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Everybody loves a pianist</title>
+
+<style>
+  body {
+    background-color: #020202;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Overflow: hidden doesn't work on <body> on mobile browser. TIL.
+     https://stackoverflow.com/questions/14270084/
+   */
+  #wrapper {
+    overflow: hidden;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    display: block;
+    margin: auto;
+  }
+
+  #main {
+    font-family: "Source Serif Pro", serif;
+    font-size: calc(14pt + 0.5vw);
+    font-style: italic;
+    line-height: 1.3em;
+    margin: 0;
+    margin-top: 2em;
+    text-align: center;
+  }
+
+  p {
+    margin: 0 0 0.5em 0;
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 720px) {
+    #main {
+      text-align: left;
+      margin-left: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-height: 680px) {
+    #main {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      text-shadow: 1px 1px 7px black;
+    }
+  }
+</style>
+
+<body>
+  <div id="wrapper">
+    <img src="tim.jpg" alt="tim-minchin-playing-piano" />
+    <div id="main">
+      <p>
+        Remember boy that music is like <span class="nowrap">love-making</span>
+      </p>
+      <p>
+        Everybody loves a pianist, but length must have
+        <span class="nowrap">a limit</span>
+      </p>
+    </div>
+  </div>
+</body>
